@@ -7,13 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>DC-GAN Image Generator</h1>
-        <div class="canvas-container">
-            <canvas id="generatedCanvas" width="280" height="280"></canvas>
+    <div class="page-shell">
+        <div class="card-shell">
+            <section class="hero-panel">
+                <span class="eyebrow">Generative AI Demo</span>
+                <h1>DC-GAN Image Generator</h1>
+                <p>Generate new images using your trained GAN model and preview them instantly in the browser.</p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <strong>Fast preview</strong>
+                        <span>Render the generated image in a responsive canvas.</span>
+                    </div>
+                    <div class="feature-item">
+                        <strong>Backend-powered</strong>
+                        <span>Calls the Flask generator service at <code>http://127.0.0.1:5000</code>.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-panel">
+                <div class="card-header">
+                    <div>
+                        <h2>Generated image</h2>
+                        <p class="subtext">Click the button to sample a new image from the model.</p>
+                    </div>
+                    <span id="status" class="status-chip">Ready</span>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="generatedCanvas" width="280" height="280"></canvas>
+                </div>
+                <button id="generateBtn">Generate Image</button>
+                <p class="hint">Make sure the backend is running on <code>http://127.0.0.1:5000</code>.</p>
+            </section>
         </div>
-        <button id="generateBtn">Generate Image</button>
-        <p class="hint">Start the backend first, then open this page from a local web server.</p>
+
+        <footer class="page-footer">
+            <span>Powered by DC-GAN, Flask, and browser canvas rendering.</span>
+        </footer>
     </div>
 
     <script src="scripts.js"></script>
