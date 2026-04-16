@@ -1,0 +1,13 @@
+.venv/
+backend/.venv/
+.venv3.10/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.DS_Store
+node_modules/
+*.log
+/tmp/dcgan-backend.log
